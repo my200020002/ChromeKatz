@@ -29,8 +29,7 @@ jobs:
           path: '@zip.lst'
           filename: 'CookieKatz.zip'
           command: 'echo ./ >> zip.lst'
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - uses: actions/upload-artifact@v4
         with:
-          files: |
-            CookieKatz.zip
+          name: my-artifact
+          path: CookieKatz.zip
